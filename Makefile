@@ -9,4 +9,4 @@ train:
 		-v `pwd`:/scratch --workdir /scratch -e HOME=/scratch --shm-size 50G\
 		stylegan3 \
 		python train.py --outdir=results --cfg=stylegan2 --data=datasets/prints.zip \
-			--gpus=1 --batch=4 --gamma=10 --mirror=1 --aug=noaug
+			--gpus=1 --batch=4 --gamma=10 --mirror=1 --aug=noaug --snap=10
