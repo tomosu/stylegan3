@@ -9,7 +9,7 @@ train:
 		-v `pwd`:/scratch --workdir /scratch -e HOME=/scratch --shm-size 50G\
 		stylegan3 \
 		python train.py --outdir=results --cfg=stylegan2 --data=datasets/prints.zip \
-			--gpus=2 --batch=32 --batch-gpu=8 --gamma=32 --mirror=1 --aug=noaug --snap=1 --metrics=None
+			--gpus=2 --batch=48 --batch-gpu=12 --gamma=32 --mirror=1 --snap=1 --metrics=None --resume=latest
 
 build-docker:
 	sudo groupadd docker
