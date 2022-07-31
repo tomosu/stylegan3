@@ -125,12 +125,12 @@ def parse_comma_separated_list(s):
  # Finds the latest pkl file in the `outdir`, including its kimg number.
  # Reimplementation of https://github.com/skyflynil/stylegan2/commit/8c57ee4633d334e480a23d7f82433c7649d50866
  
- def locate_latest_pkl(outdir: str):
-     allpickles = sorted(glob.glob(os.path.join(outdir, '0*', 'network-*.pkl')))
-     latest_pkl = allpickles[-1]
-     RE_KIMG = re.compile('network-snapshot-(\d+).pkl')
-     latest_kimg = int(RE_KIMG.match(os.path.basename(latest_pkl)).group(1))
-     return latest_pkl, latest_kimg
+def locate_latest_pkl(outdir: str):
+    allpickles = sorted(glob.glob(os.path.join(outdir, '0*', 'network-*.pkl')))
+    latest_pkl = allpickles[-1]
+    RE_KIMG = re.compile('network-snapshot-(\d+).pkl')
+    latest_kimg = int(RE_KIMG.match(os.path.basename(latest_pkl)).group(1))
+    return latest_pkl, latest_kimg
 
 #----------------------------------------------------------------------------
 
@@ -275,8 +275,8 @@ def main(**kwargs):
     if opts.resume is not None:
         if opts.resume == "latest":
              c.resume_pkl, c.resume_kimg = locate_latest_pkl(opts.outdir)
-         else:
-             c.resume_pkl = opts.resume
+        else:
+            c.resume_pkl = opts.resume
         c.ada_kimg = 100 # Make ADA react faster at the beginning.
         c.ema_rampup = None # Disable EMA rampup.
         c.loss_kwargs.blur_init_sigma = 0 # Disable blur rampup.
