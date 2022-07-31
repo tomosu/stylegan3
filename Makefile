@@ -42,5 +42,5 @@ video:
 	docker run --gpus all -it --rm --user $(id -u):$(id -g) \
 		-v `pwd`:/scratch --workdir /scratch -e HOME=/scratch --shm-size 50G\
 		stylegan3 \
-		python gen_video.py --output=videos/t1_s0-31_pkl92.mp4 --trunc=1 --seeds=0-31 --w-frames=240 \
-			--network=results/wiki2/00000-stylegan2-prints-gpus2-batch32-gamma32/network-snapshot-000092.pkl
+		python gen_video.py --output=videos/t1_s0-31_pkl92.mp4 --trunc=1 --seeds=0-31 --w-frames=360 \
+			--network=results/wiki2/00001-stylegan2-prints-gpus2-batch32-gamma32/network-snapshot-000208.pkl
