@@ -2,3 +2,5 @@ datasets/
 results/
 .cache/
 .vscode/
+__pycache__
+dnnlib/__pycache__
