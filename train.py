@@ -269,6 +269,8 @@ def main(**kwargs):
         if opts.aug == 'ada':
             c.ada_target = opts.target
             c.augment_p = opts.p
+        if opts.aug == 'fixed':
+            c.augment_p = opts.p
 
     # Resume.
     if opts.resume is not None:
