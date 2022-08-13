@@ -270,7 +270,7 @@ def main(**kwargs):
                                            scale=0.5, rotate=0.75, aniso=0.5, xfrac=0.5, scale_std=0.05, rotate_max=0.1, aniso_std=0.05, xfrac_std=0.05,
                                            brightness=1, contrast=1, lumaflip=0, hue=0.5, saturation=1, brightness_std=0.1, contrast_std=0.2, hue_max=0.25, saturation_std=0.3,
                                            imgfilter=0, imgfilter_bands=[1,1,1,1], imgfilter_std=1,
-                                           noise=0.2, cutout=0, noise_std=0.05, cutout_size=0.5)
+                                           noise=0, cutout=0, noise_std=0.05, cutout_size=0.5)
         if opts.aug == 'ada':
             c.ada_target = opts.target
             c.augment_p = opts.p
